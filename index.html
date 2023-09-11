@@ -88,31 +88,6 @@
             transform: scale(1.5); /* You can adjust the zoom level as needed */
         }
     </style>
-</head>
-<body>
-    <!-- The image you want to zoom -->
-    <img id="zoomedImage" src="Krishna.jpg" alt="Zoomable Image">
-
-    <!-- Optional: Add buttons to zoom in and out -->
-    <button onclick="zoomIn()">Zoom In</button>
-    <button onclick="zoomOut()">Zoom Out</button>
-
-    <script>
-        // JavaScript functions for zooming in and out
-        function zoomIn() {
-            var image = document.getElementById('zoomedImage');
-            var currentScale = getComputedStyle(image).getPropertyValue('transform');
-            var scaleValue = currentScale === 'none' ? 1 : parseFloat(currentScale.split(',')[0].slice(7));
-            image.style.transform = `scale(${scaleValue + 0.1})`;
-        }
-
-        function zoomOut() {
-            var image = document.getElementById('zoomedImage');
-            var currentScale = getComputedStyle(image).getPropertyValue('transform');
-            var scaleValue = currentScale === 'none' ? 1 : parseFloat(currentScale.split(',')[0].slice(7));
-            image.style.transform = `scale(${scaleValue - 0.1})`;
-        }
-    </script>
 
 
 
